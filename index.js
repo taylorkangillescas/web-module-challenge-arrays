@@ -45,8 +45,8 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(arr){
-    return originalFlavors;
+function copy(array){
+    return array;
 }    
 console.log('task 1:', copy(originalFlavors));
 
@@ -66,12 +66,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(array){
-   if(array.length === 31){
-       return true
-   }
-   else{
-       return false
-   }
+//    if(array.length === 31){
+//        return true
+//    }
+//    else{
+//        return false
+//    }
+// }
+return Boolean(array.length === 31)
 }
 
 console.log('task 2:', is31Flavors(originalFlavors)); 
@@ -147,15 +149,24 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
+// function removeFlavorByName(array, flavor){
+//     let newArr = [];
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === (flavor)){
+//             newArr.splice(array[i]);
+//         }
+//         return newArr
+//         console.log(newArr);
+//     }
+// }
+// console.log('task 6:', removeFlavorByName(originalFlavors, 'Rocky Road'));
+
 function removeFlavorByName(array, flavor){
-    let newArr = [];
-    for(let i = 0; i < array.length; i++){
-        if(array[i].includes(flavor)){
-            newArr.splice([i], 1);
-        }
-    }
+    let i = array.indexOf(flavor);
+    array.splice(i, 1);
+    console.log(array);
+    return array;
 }
-console.log('task 6:', removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
